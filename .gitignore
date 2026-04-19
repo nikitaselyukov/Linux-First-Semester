@@ -1,0 +1,8 @@
+builddir/
+*.o
+*.out
+*.log
+*.tmp
+Linux.FirstSem.Etc/
+SeventhClone/
+.vscode/
