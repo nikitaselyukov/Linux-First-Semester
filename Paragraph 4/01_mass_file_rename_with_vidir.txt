@@ -1,0 +1,7 @@
+в директории: 
+env EDITOR=vim vidir
+
+1) Esc
+2) ggVG
+3) g~
+4) :wq + Enter

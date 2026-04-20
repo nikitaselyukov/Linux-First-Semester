@@ -1,0 +1,16 @@
+<property>
+  <name>dfs.namenode.name.dir</name>
+  <value>/var/hdfs/name</value>
+</property>
+<property>
+  <name>dfs.namenode.data.dir</name>
+  <value>/var/hdfs/data</value>
+</property>
+<property>
+  <name>dfs.namenode.data.dir</name>
+  <value>/var/hdfs/data</value>
+</property>
+<property>
+  <name>dfs.namenode.data.dir</name>
+  <value>/var/hdfs/data</value>
+</property>
