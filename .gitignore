@@ -6,3 +6,18 @@ builddir/
 Linux.FirstSem.Etc/
 SeventhClone/
 .vscode/
+# build / binaries
+a.out
+build/
+builddir/
+*.o
+*.out
+
+# generated practice artifacts
+**/*-converted.png
+Paragraph 3/my-output
+Paragraph 5/message_pipe
+
+# common temp files
+*~
+.DS_Store

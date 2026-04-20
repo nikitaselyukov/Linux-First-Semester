@@ -1,9 +1,0 @@
-итого 28
--rwxrwxr-x 1 nik nik  628 мар 31 14:08 01_open_file_by_mime_type.sh
--rwxrwxr-x 1 nik nik  448 мар 31 14:08 02_get_weather_by_coordinates.sh
--rwxrwxr-x 1 nik nik  335 мар 31 14:08 03_run_command_with_output_redirect.sh
--rwxrwxr-x 1 nik nik  677 апр  4 16:21 04_generate_uppercase_rename_script.sh
--rwxrwxr-x 1 nik nik  210 апр  4 16:21 05_rename_files_to_uppercase.sh
--rw-rw-r-- 1 nik nik    0 апр  4 16:24 my-output
-drwxrwxr-x 2 nik nik 4096 мар 31 14:08 test_generate_uppercase_rename_script
-drwxrwxr-x 2 nik nik 4096 апр  4 15:38 test_open_file_by_mime_type
