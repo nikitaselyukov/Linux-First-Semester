@@ -53,6 +53,13 @@ gcc -Wall -Wextra -O2 01_compare_getpid_methods.c -o compare_getpid_methods
 - Сравнение двух результатов показывает, что в обоих случаях программа получает один и тот же идентификатор текущего процесса.
 - Использование типов `pid_t` и `long` делает пример аккуратнее и ближе к сигнатурам используемых функций.
 
+### Пример запуска
+```bash
+cd "Paragraph 9"
+gcc -Wall -Wextra -O2 01_compare_getpid_methods.c -o compare_getpid_methods
+./compare_getpid_methods
+```
+
 ---
 
 ## 2) Дочерние процессы: `fork()` + `execlp()` + `waitpid()`
@@ -118,6 +125,13 @@ expr 2 + 2 * 2
 - Родительский процесс вызывает `waitpid(pid, &status, 0)` и ожидает завершения именно этого дочернего процесса.
 - Проверка `WIFEXITED(status)` и `WEXITSTATUS(status)` позволяет установить, завершился ли дочерний процесс штатно и с каким кодом.
 
+### Пример запуска
+```bash
+cd "Paragraph 9"
+gcc -Wall -Wextra -O2 02_run_expr_in_child_process.c -o run_expr_in_child_process
+./run_expr_in_child_process
+```
+
 ---
 
 ## 3) Переменные среды: вывод переменных, имя которых содержит `L`
@@ -165,6 +179,13 @@ gcc -Wall -Wextra -O2 03_print_env_vars_with_L.c -o print_env_vars_with_L
 - Функция `has_uppercase_l_in_name()` проверяет только часть строки до символа `=`, то есть именно имя переменной среды.
 - Если в имени встречается символ `L`, строка выводится на экран полностью.
 - Таким образом, программа не изменяет окружение, а только выполняет его выборочный просмотр.
+
+### Пример запуска
+```bash
+cd "Paragraph 9"
+gcc -Wall -Wextra -O2 03_print_env_vars_with_L.c -o print_env_vars_with_L
+./print_env_vars_with_L
+```
 
 ---
 
@@ -271,6 +292,13 @@ gcc -Wall -Wextra -O2 04_isolate_hostname_with_clone.c -o isolate_hostname_with_
 - Родительский процесс также вызывает `gethostname()`, поэтому можно сопоставить оба значения.
 - В отличие от исходного чернового варианта, здесь добавлены проверки `argc`, `malloc`, `clone`, `gethostname`, `sethostname` и `waitpid`, а также исправлены опечатки в выводе.
 - На некоторых системах вызов `clone()` с `CLONE_NEWUSER` и `CLONE_NEWUTS` может завершиться с ошибкой `Operation not permitted`; это связано с настройками пространств имён, а не с ошибкой в логике программы.
+
+### Пример запуска
+```bash
+cd "Paragraph 9"
+gcc -Wall -Wextra -O2 04_isolate_hostname_with_clone.c -o isolate_hostname_with_clone
+./isolate_hostname_with_clone spicy
+```
 
 ---
 

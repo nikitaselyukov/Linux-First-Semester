@@ -80,7 +80,8 @@ exit 0
 ### Пример запуска
 
 ```bash
-./01_open_file_by_mime_type.sh test_open_file_by_mime_type/1.jpg
+cd "Paragraph 3"
+./01_open_file_by_mime_type.sh test_open_file_by_mime_type/istockphoto-1440976287-612x612.jpg
 ```
 
 ---
@@ -139,6 +140,7 @@ curl "wttr.in/$LATITUDE,$LONGITUDE"
 ### Пример запуска
 
 ```bash
+cd "Paragraph 3"
 ./02_get_weather_by_coordinates.sh -x 30 -y 59
 ```
 
@@ -186,6 +188,7 @@ my_func ./my-output ls -l
 ### Пример запуска
 
 ```bash
+cd "Paragraph 3"
 ./03_run_command_with_output_redirect.sh
 cat my-output
 ```
@@ -254,6 +257,7 @@ echo "$GENERATED_SCRIPT generated."
 ### Пример запуска
 
 ```bash
+cd "Paragraph 3"
 ./04_generate_uppercase_rename_script.sh test_generate_uppercase_rename_script
 cat 05_rename_files_to_uppercase.sh
 ./05_rename_files_to_uppercase.sh

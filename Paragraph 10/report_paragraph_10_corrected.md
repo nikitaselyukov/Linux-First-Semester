@@ -211,6 +211,14 @@ Moved file contents: Hello, World!
 
 ---
 
+### Пример запуска
+
+```bash
+cd "Paragraph 10"
+g++ -Wall -Wextra -O2 01_linux_file_wrapper.cpp -o linux_file_wrapper
+./linux_file_wrapper
+```
+
 ## Проверка закрытия файловых дескрипторов
 
 ```bash
@@ -218,6 +226,13 @@ valgrind --track-fds=yes ./linux_file_wrapper
 ```
 
 Эта проверка используется для контроля корректного закрытия файловых дескрипторов после завершения программы.
+
+### Пример запуска
+
+```bash
+cd "Paragraph 10"
+valgrind --track-fds=yes ./linux_file_wrapper
+```
 
 ---
 
