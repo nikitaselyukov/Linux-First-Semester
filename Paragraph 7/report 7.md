@@ -36,6 +36,16 @@ Date:   Sat Apr 4 19:15:53 2026 +0300
     init
 ```
 
+### Пример запуска
+```bash
+cd "Paragraph 7"
+git init
+git status
+git add "report 7.md"
+git commit -m "init"
+git log
+```
+
 ---
 
 ## 2) Ветки: создание ветки, коммит и слияние
@@ -62,6 +72,17 @@ Fast-forward
 ```text
 e995b8f (HEAD -> master, work) new commit
 8c6ad9e init
+```
+
+### Пример запуска
+```bash
+cd "Paragraph 7"
+git checkout -b work
+touch new_file.txt
+git add new_file.txt
+git commit -m "new commit"
+git checkout master
+git merge work
 ```
 
 ---
@@ -104,6 +125,24 @@ git clone /home/nik/Linux.FirstSem/Linux.FirstSem.Etc/SeventhBare SeventhClone
 После клонирования в рабочем каталоге появились файлы репозитория:
 ```text
 report 7.md  new_file.txt
+```
+
+### Пример запуска
+```bash
+# 1) создать bare-репозиторий
+mkdir -p "/home/nik/Linux.FirstSem/Linux.FirstSem.Etc/SeventhBare"
+cd "/home/nik/Linux.FirstSem/Linux.FirstSem.Etc/SeventhBare"
+git init --bare
+
+# 2) из рабочей копии привязать remote и отправить
+cd "/home/nik/Linux.FirstSem/Paragraph 7"
+git remote remove origin 2>/dev/null
+git remote add origin /home/nik/Linux.FirstSem/Linux.FirstSem.Etc/SeventhBare
+git push -u origin master
+
+# 3) клонировать вторую копию
+cd /home/nik/Linux.FirstSem
+git clone /home/nik/Linux.FirstSem/Linux.FirstSem.Etc/SeventhBare SeventhClone
 ```
 
 ---
@@ -210,6 +249,30 @@ b6e3a0e resolve conflict
 156d9c9 (origin/branchA, branchA) branchA
 e995b8f (work) new commit
 8c6ad9e init
+```
+
+### Пример запуска
+```bash
+# в первой копии
+cd "/home/nik/Linux.FirstSem/Paragraph 7"
+git checkout -b branchA
+echo "branchA" > new_file.txt
+git add new_file.txt
+git commit -m "branchA"
+git push -u origin branchA
+
+# во второй копии
+cd "/home/nik/Linux.FirstSem/SeventhClone"
+git checkout -b branchB
+echo "branchB" > new_file.txt
+git add new_file.txt
+git commit -m "branchB"
+git push -u origin branchB
+
+# слияние и фиксация конфликта
+git checkout master
+git merge origin/branchA
+git merge branchB
 ```
 
 ---
