@@ -63,6 +63,15 @@ zlib_build_demo.o: zlib_build_demo.cc zlib_build_demo.hh
 - Правило `zlib_build_demo.o: zlib_build_demo.cc zlib_build_demo.hh` явно указывает зависимость объектного файла и от исходного файла, и от заголовка.
 - Благодаря этому при изменении `zlib_build_demo.hh` Make будет считать `zlib_build_demo.o` устаревшим и выполнит его пересборку.
 
+### Пример запуска
+
+```bash
+cd "Paragraph 8"
+make
+touch zlib_build_demo.hh
+make
+```
+
 ---
 
 ## 2) Make + pkg-config: сборка с библиотекой zlib
